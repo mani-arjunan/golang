@@ -1,0 +1,4 @@
+go 1.22.0
+
+use ./multi_module
+use ./example/hello
