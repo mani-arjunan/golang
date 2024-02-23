@@ -1,9 +1,31 @@
 # Go Language Beginner readme
 
-Go is a statically typed language and also its a compiled language unlike JS, Python(dynamically typed). It also supports
+Go is a statically and Strongly typed language and also its a compiled language unlike JS, Python(dynamically typed). It also supports
 concurrency model, It also supports type system out of the box(like typescript for javascript). Since it is compiled language
 it turns our code into machine code quickly which makes the application faster on the run time. It also has
 built in garbage collection.
+
+## Go is Compiled Language
+
+Unlike python, javascript etc Go is a compiled language, meaning it will compile the human readable code and converts into machine code
+where that output machine code alone can be transfered to other people or put in servers to execute.
+Unlike hpython or js, other people or servers dont need js runtime(node) or python runtime, since in go we are transferring the direct machine code
+the OS(platform specific) can able to execute directly.
+
+## Memory management in Go
+
+Python, javascript etc are managed by garbage collector(Automatic memory management), and the code(Garbage collector code) that needs to mange
+this memory will be in the python or js runtime.
+But languages like C, C++ these are manual memory management, and needs to handled manually in our program.
+Go is also managed by garbage collector(Automatic memory management).
+Now there arise a question, since go is a compiled language like C, C++ etc, where does the Garabge collector code will be present 
+The answer is `In every Go program when we are compiling, the garbage collector code(Go Runtime) will also be compiled along with it`
+
+
+Example for Statically and strongly typed language
+`const str: string; const num: number; console.log(str + ":" + num) => this will work in typescript(only statically typed)`
+`var str string; var num int; println(str + ":" + num) => will not work in go(since it is both statically and strong type)`
+
 
 To summarize:
 
@@ -49,3 +71,13 @@ Some initial observations
             nested
                 -> nested.go => can have package has main / nested
 
+Go Variables
+
+    - bool => boolean type
+    - string => string type
+    - int(int, int8, int16, int32, int64) => integer(positive/negative whole numbers) type with various bits
+    - uint(unit, unint8, unit16, unit32, unit64) => unsigned(positive whole numbers) integer type with various bits
+    - float(float32, float64) => fraction numbers with various bits
+    - complex => imaginary numbers with various bits(very rare)
+    - byte => alias for unit8(basically one byte = 8bits)
+    - rune => alias for int32
