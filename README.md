@@ -5,7 +5,7 @@ concurrency model, It also supports type system out of the box(like typescript f
 it turns our code into machine code quickly which makes the application faster on the run time. It also has
 built in garbage collection.
 
-## Go is Compiled Language
+## Go is Compiled Language(Changed from Remote Computer)
 
 Unlike python, javascript etc Go is a compiled language, meaning it will compile the human readable code and converts into machine code
 where that output machine code alone can be transfered to other people or put in servers to execute.
@@ -81,3 +81,43 @@ Go Variables
     - complex => imaginary numbers with various bits(very rare)
     - byte => alias for unit8(basically one byte = 8bits)
     - rune => alias for int32
+    - Go variables are pass by value, not by reference
+
+    Unless any application needs extreme performance care, otherwise its ok to use the below variables
+    - int, uint, float64,complex128
+    
+    Variables can also be typecasted for EG:
+    - age := 12; ageFloat := float64(age);
+
+Go also supports `const` for immutable type of variables, constant variables doesn't support `:=`syntax
+
+Go Print Statement
+    Go follows similar approach to C language of using printf and sprintf
+
+    - printf => prints the formatted string
+    - sprintf => returns the formatted string(will not print in stdoutput)
+    - %v, %s => replaces %v with argument value EG: printf("Hi %v is manikandan", "this")
+    - %d => interpolate for integer in decimal form
+    - %f => interpolate for float
+    - %.2f => interpolate to float with rounding 2.
+TIP: Sprintf is similar to `\`` in js
+
+
+## Structs
+
+Structs are a collection of type(basically a js object literal ;)
+EG:
+    `type student Struct {
+        name string
+        age int
+    }`
+Structs can also be nested inside anothe Struct
+
+    - Embedded Structs: These are similar to & in type in typescript.
+
+## Interfaces
+
+    Interfaces are similar to typescript except that the fact in Go, interfaces act as function signature
+EG: `type message interface { getMessage() string }`
+    Whomever structs implemented this interface will automatically inherits this interface
+
