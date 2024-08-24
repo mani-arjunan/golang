@@ -9,3 +9,4 @@ func nes() {
 func Nes() {
   fmt.Println("Hello! From Nes")
 }
+

@@ -5,7 +5,7 @@ concurrency model, It also supports type system out of the box(like typescript f
 it turns our code into machine code quickly which makes the application faster on the run time. It also has
 built in garbage collection.
 
-## Go is Compiled Language(Changed from Remote Computer)
+## Go is Compiled Language
 
 Unlike python, javascript etc Go is a compiled language, meaning it will compile the human readable code and converts into machine code
 where that output machine code alone can be transfered to other people or put in servers to execute.
@@ -120,4 +120,6 @@ Structs can also be nested inside anothe Struct
     Interfaces are similar to typescript except that the fact in Go, interfaces act as function signature
 EG: `type message interface { getMessage() string }`
     Whomever structs implemented this interface will automatically inherits this interface
+
+## slices
 
