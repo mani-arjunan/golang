@@ -105,4 +105,7 @@ func main() {
 	c1.count++
 	c1.count++
   fmt.Printf("count for c1 is %v", c1.getCounter())
+
+  fmt.Printf("Mani")
+  fmt.Printf("Continue")
 }
